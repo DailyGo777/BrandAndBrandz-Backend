@@ -11,7 +11,7 @@ export const routeHandler = (req, res) => {
   res.status(404).json({ error: 'Route not found' });
 };
 
-export const limiter = rateLimitrateLimit({
+export const limiter = rateLimit({
   windowMs: 1 * 60 * 1000,  // 1 minute window
   max: 5,                   // limit each IP to 5 requests per window
   message: {
